@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Profile Circle -->
+      <div class="profile-circle">
+        <img src="images/intro_image.enc" alt="Profile Picture" />
+      </div>
+
+      <!-- Name & Tagline -->
+      <h1>Ebad Ur Rehman</h1>
+      <p class="tagline">AMBITIOUS . VISIONARY . RESILIENT</p>
+
+      <!-- Navigation -->
+      <nav>
+        <ul>
+          <button id="introButton" class="nav-button">INTRO</button>
+          <button id="skillsButton" class="nav-button">SKILLS</button>
+          <button id="projectsButton" class="nav-button">PROJECTS</button>
+          <button id="contactButton" class="nav-button">CONTACT</button>
+        </ul>
+      </nav>
+
+      <!-- Social Icons -->
+      <div class="social-icons">
+        <a href="assets/resume.pdf" target="_blank" class="icon">
+          <img src="images/file-solid.svg" alt="Resume" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/ebad-ur-rehman-714a4a304/"
+          target="_blank"
+          class="icon"
+        >
+          <img src="images/linkedin-brands.svg" alt="LinkedIn" />
+        </a>
+        <a href="mailto:ebad219@gmail.com" class="icon">
+          <img src="images/envelope-solid.svg" alt="Email" />
+        </a>
+        <a
+          href="https://github.com/Eur105"
+          target="_blank"
+          class="icon"
+        >
+          <img src="images/github-brands.svg" alt="GitHub" />
+        </a>
+      </div>
+    </div>
+
+    <!-- Intro Modal -->
+    <div id="introModal" class="modal">
+      <div class="intro-box">
+        <span class="close-intro-btn" onclick="closeIntro()">×</span>
+        <h2 class="intro-heading">I N T R O</h2>
+        <img src="images/intro_img.jpg" alt="Your Image" class="intro-image" />
+        <p>
+          I'm a final-year Computer Science student at FAST-NUCES with a strong
+          interest in technology, problem-solving, and innovation. I enjoy
+          exploring new technologies and working on projects that have
+          real-world impact.
+        </p>
+        <p>
+          Outside of academics, I’ve been actively involved in debating and
+          public speaking, which has helped me develop strong communication and
+          analytical skills. Sports, especially football and cricket, have
+          taught me teamwork and perseverance—values I apply in both my personal
+          and professional life.
+        </p>
+      </div>
+    </div>
+
+    <!-- Skills Modal -->
+    <div id="skillsModal" class="modal">
+      <div class="skills-box">
+        <span class="close-skills-btn" onclick="closeSkills()">×</span>
+        <h2 class="skills-heading">S K I L L S</h2>
+        <div class="skills-container">
+          <div class="skills-list">
+            <ul>
+              <li>C/C++</li>
+              <li>JavaScript</li>
+              <li>Flutter & Dart</li>
+              <li>HTML & CSS</li>
+              <li>SQL & Databases</li>
+            </ul>
+            <ul>
+              <li>Shell Scripting</li>
+              <li>Linux/x86 Assembly</li>
+              <li>Figma UI/UX Design</li>
+              <li>Data Structures & Algorithms</li>
+              <li>Object Oriented Programming</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="projectsModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn projects-close-btn">&times;</span>
+        <h2 class="modal-title">PROJECTS</h2>
+
+        <div class="project">
+          <h3>SPORTIFY</h3>
+          <p class="project-description"></p>
+          <p>
+            Sportify is an automated sports venue booking and management system
+            designed to streamline how players discover, book, and manage sports
+            facilities in Pakistan. Built using Flutter for the frontend and
+            Node.js for the backend, it offers real-time venue availability,
+            instant booking approvals, slot reallocation, and automated
+            scheduling. The admin panel enables venue owners to manage bookings,
+            track payments, and handle user approvals seamlessly, while
+            real-time notifications keep users updated on booking status and
+            payments. Sportify aims to revolutionize sports management by making
+            the process efficient, transparent, and hassle-free for players and
+            venue owners alike.
+          </p>
+        </div>
+        <hr />
+
+        <div class="project">
+          <h3>HASHLIMO</h3>
+          <p class="project-description"></p>
+          <p>
+            Hash Limo stands as a dynamic marketplace connecting the vehicle
+            owner with individuals seeking short-term transportation solutions.
+            Hash Limo has emerged as a leading booking service, driven by the
+            global appetite for seamless travel experiences in several states of
+            USA. In Pakistan, where traditional car/auto bookings prevail due to
+            their low costs, a substantial market remains largely untapped. This
+            presents a strategic opportunity for Hash Limo to provide affordable
+            mobility solutions, tapping into this extensive market potential.
+          </p>
+        </div>
+        <hr />
+
+        <div class="project">
+          <h3>TENNIS ANALYSIS SYSTEM</h3>
+          <p class="project-description"></p>
+          <p>
+            The AI/ML project analyzes Tennis players in a video to measure
+            their speed, ball shot speed and number of shots. This project will
+            detect players and the tennis ball using YOLO and also utilizes CNNs
+            to extract court key points. Tennis analysis system aims to
+            revolutionize the way tennis is understood and played. By accurately
+            tracking player movements and ball trajectories, analyzing
+            performance metrics, and predicting match outcomes, the system will
+            provide invaluable insights for players, coaches, and enthusiasts
+            alike. Expectations include improved player training strategies,
+            enhanced tactical decision-making during matches, and a deeper
+            understanding of the game's nuances.
+          </p>
+        </div>
+        <hr />
+
+        <div class="project">
+          <h3>GEOMETRIC ALGORITHM VISUALIZATION</h3>
+          <p class="project-description"></p>
+          <p>
+            This python-based project implements geometric algorithms while
+            showcasing various Big O complexities through interactive and
+            file-based input methods. Users can draw objects on the screen or
+            upload predefined data, allowing for flexibility in exploring
+            computational geometry. A key focus of the project is delivering an
+            intuitive and visually appealing user interface, ensuring that
+            algorithmic steps are presented with clarity. By integrating
+            interactive visualization techniques, this project enhances user
+            understanding of geometric computations and algorithmic efficiency,
+            demonstrating my ability to develop algorithm-focused applications
+            with strong UI/UX considerations.
+          </p>
+        </div>
+        <hr />
+
+        <div class="project">
+          <h3>TO-DO LIST</h3>
+          <p class="project-description"></p>
+          <p>
+            The JavaScript-based To-Do List Application is an interactive task
+            management tool designed for efficiency and ease of use. Built with
+            JavaScript, HTML, and CSS, it allows users to add, update, and
+            delete tasks while organizing them in a structured table format with
+            serial numbers indicating priority. Users can enter task details
+            such as time frame, title, and description, with an auto-suggestion
+            feature providing smart recommendations. The application supports
+            clearing all tasks at once for quick list resets and ensures data
+            persistence using local storage. With a responsive design optimized
+            for both desktop and mobile use, this project demonstrates my
+            ability to create functional and user-friendly web applications with
+            a focus on seamless interactions and intuitive design.
+          </p>
+        </div>
+        <hr />
+
+        <div class="project">
+          <h3>DICTIONARY APPLICATION</h3>
+          <p class="project-description"></p>
+          <p>
+            This dictionary application, developed in C++, efficiently retrieves
+            word meanings, types, and example sentences by leveraging advanced
+            data structures like tries. The application is designed for fast and
+            accurate word lookups while maintaining a history of user searches
+            for easy reference. By utilizing trie structures, the dictionary
+            ensures optimal search performance, making it a powerful tool for
+            language learners and enthusiasts. This project demonstrates my
+            ability to implement advanced data structures in real-world
+            applications, optimizing both functionality and user experience.
+          </p>
+        </div>
+        <hr />
+
+        <div class="project">
+          <h3>OFFICE MANAGEMENT SYSTEM</h3>
+          <p class="project-description"></p>
+          <p>
+            The Office Management System, developed in C, streamlines employee
+            administration with efficient file handling capabilities. It serves
+            as a centralized platform for managing employee records, including
+            personal details, employment history, and attendance tracking. Task
+            allocation features ensure accountability, while employees can
+            manage their to-do lists for better productivity. The system also
+            integrates salary management, automating calculations and generating
+            receipts. Secure login and signup functionalities restrict access to
+            authorized personnel, enabling seamless addition and modification of
+            records. By optimizing administrative workflows, this system
+            enhances organizational efficiency and facilitates structured
+            employee management.
+          </p>
+        </div>
+        <hr />
+
+        <div class="project">
+          <h3>COVID PATIENT MANAGEMENT SYSTEM</h3>
+          <p class="project-description"></p>
+          <p>
+            This C++ application is designed to manage hospital records of COVID
+            patients using object-oriented programming principles. Each patient
+            has a secure profile with a username and password, allowing them to
+            update personal details, view their vaccination status (including
+            vaccine type, number of doses, and dates), check COVID test results,
+            and track upcoming test schedules. Doctors have separate login
+            credentials to securely access patient records while maintaining
+            confidentiality, along with access to their professional
+            information. The application also features a signup option for new
+            patients, enabling them to create profiles via an online form.
+            Additionally, a billing module generates invoices for hospital
+            services, including masks, vaccines, and COVID tests. This project
+            demonstrates my expertise in developing secure, structured, and
+            user-friendly healthcare management systems in C++.
+          </p>
+        </div>
+        <hr />
+
+        <div class="project">
+          <h3>SORTING ALGORITHMS LIBRARY</h3>
+          <p class="project-description"></p>
+          <p>
+            Unlike high-level languages, Assembly lacks an extensive set of
+            libraries for common tasks. To address this limitation, I developed
+            a sorting algorithms library that simplifies programming by
+            providing pre-defined implementations of various sorting techniques,
+            including Heap, Merge, Insertion, Selection, Gnome, Shaker, Bubble,
+            and Cocktail Sort. This library significantly reduces coding time,
+            enabling programmers to focus on more critical aspects of their
+            projects while leveraging optimized sorting methods. By streamlining
+            algorithm implementation in Assembly, this project enhances
+            efficiency and improves the accessibility of sorting functions for
+            low-level programming tasks.
+          </p>
+        </div>
+        <hr />
+
+        <div class="project">
+          <h3>UBUNTU BASED RSA CRYPTOGRAPHY</h3>
+          <p class="project-description"></p>
+          <p>
+            This project focused on implementing RSA cryptography in C on
+            Ubuntu, utilizing OpenMP and MPI frameworks to execute the algorithm
+            in both serial and parallel modes. A key aspect of the project
+            involved analyzing the performance differences between these two
+            frameworks, evaluating their efficiency in handling cryptographic
+            operations. By integrating parallel computing techniques, the
+            project explored the impact of computational distribution on
+            encryption and decryption speed, demonstrating expertise in both
+            cryptographic algorithms and parallel programming methodologies.
+          </p>
+        </div>
+        <hr />
+
+        <div class="project">
+          <h3>ENHANCED CEASER'S CIPHER</h3>
+          <p class="project-description"></p>
+          <p>
+            Leveraging advanced Python libraries, this project extends the
+            traditional Caesar’s cipher by implementing enhanced encryption and
+            decryption functionalities. The improved cipher introduces dynamic
+            shift mechanisms and additional security layers, making it more
+            robust compared to its classical version. By integrating modern
+            cryptographic techniques, this project showcases expertise in
+            Python-based encryption, highlighting a strong understanding of
+            secure communication principles.
+          </p>
+        </div>
+        <hr />
+      </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+      <div class="contact-box">
+        <span class="close-contact-btn" onclick="closeContact()">×</span>
+        <h2 class="contact-heading">CONTACT</h2>
+
+        <form id="contactForm">
+          <!-- Two Inputs Side by Side -->
+          <div class="input-row">
+            <div class="form-group">
+              <label for="name">NAME</label>
+              <input type="text" id="name" name="name" />
+            </div>
+            <div class="form-group">
+              <label for="email">YOUR EMAIL</label>
+              <input type="email" id="email" name="email" />
+            </div>
+          </div>
+
+          <!-- Message Textarea -->
+          <div class="form-group">
+            <label for="message">MESSAGE</label>
+            <textarea id="message" name="message"></textarea>
+          </div>
+
+          <!-- Buttons -->
+          <div class="button-row">
+            <button type="submit" id="sendMessageBtn">SEND MESSAGE</button>
+            <button type="reset" id="resetBtn">RESET</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2025 Ebad Ur Rehman</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

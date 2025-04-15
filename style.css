@@ -1,0 +1,471 @@
+/* General Styles */
+body {
+  background: url("images/background1.jpg") no-repeat center center/cover;
+  text-align: center;
+  color: white;
+  font-family: "Source Sans Pro", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: hidden;
+  margin: 0;
+  padding: 0;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Profile Circle */
+.profile-circle {
+  width: 120px;
+  height: 120px;
+  border: 2px solid white;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 20px auto;
+}
+
+.profile-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Navigation */
+nav ul {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin-top: 20px;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.nav-button {
+  background: transparent;
+  color: inherit; /* Keeps text color the same */
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out,
+    border-bottom-color 0.2s ease-in-out;
+}
+
+/* Slightly darken the background on hover */
+.nav-button:hover {
+  background: rgba(255, 255, 255, 0.1); /* Adds a slight brightness */
+  color: inherit;
+}
+
+.nav-button:focus,
+.nav-button:active {
+  background: transparent !important;
+  color: white !important;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Even spacing */
+  margin-top: 20px;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px; /* Ensure uniform size */
+  height: 50px; /* Ensure uniform size */
+  border: 2px solid white;
+  border-radius: 50%;
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.social-icons a img {
+  width: 24px; /* Keep all icons same size */
+  height: 24px;
+  filter: invert(1); /* Make icons white */
+  object-fit: contain; /* Ensure proper scaling */
+  filter: invert(1) brightness(2);
+}
+
+/* Hover Effect */
+.social-icons a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+footer {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+  font-size: 14px;
+  font-family: "Source Sans Pro", sans-serif;
+  letter-spacing: 2px;
+}
+
+/* Modal Background (Blur Effect) */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Light overlay */
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.5s ease-in-out;
+  display: flex;
+}
+
+/* Content Box (Centered, 1/3 of the Screen) */
+.intro-box {
+  background: #1b1f22; /* Semi-transparent dark box */
+  border-radius: 15px;
+  padding: 30px;
+  text-align: justify;
+  width: 40vw; /* 1/3 of the screen */
+  max-width: 450px; /* Limit max width */
+  min-height: 60vh; /* Cover at least 60% of screen */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.intro-content {
+  max-height: 80vh; /* Ensures the modal doesn't exceed screen height */
+  overflow-y: 0; /* Enables vertical scrolling */
+  padding: 20px;
+}
+
+/* Enlarged Image */
+.intro-image {
+  width: 150px; /* Increased size */
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 2px solid white; /* Adds a clean white border */
+}
+
+/* Heading */
+.intro-heading {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: white;
+}
+
+/* Paragraphs */
+.intro-box p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: white;
+}
+
+/* Footer */
+.intro-box footer {
+  font-size: 12px;
+  margin-top: 15px;
+  opacity: 0.8;
+  color: white;
+}
+
+/* Close Button */
+.close-intro-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+}
+
+.close-intro-btn:hover {
+  padding: 5px; /* Expands slightly on hover */
+}
+
+/* Fade-in animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Skills Modal (Same Style as Intro) */
+.skills-box {
+  background: #1b1f22; /* Semi-transparent dark box */
+  border-radius: 15px;
+  padding: 30px;
+  text-align: left;
+  width: 40vw; /* 1/3 of the screen */
+  max-width: 450px; /* Limit max width */
+  min-height: 50vh; /* Cover at least 50% of screen */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+/* Heading */
+.skills-heading {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 50px;
+  color: white;
+}
+
+/* Skills Container */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+/* Skills List */
+.skills-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 70px; /* Adjust spacing between columns */
+  text-align: left;
+  width: 80%; /* Adjust width based on modal */
+}
+
+.skills-list ul {
+  list-style-type: disc; /* Bullet points */
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+
+.skills-list li {
+  font-size: 15px;
+  margin-bottom: 15px;
+  color: white;
+  white-space: nowrap; /* Prevents text from wrapping */
+  /*overflow: hidden; /* Ensures it doesn’t overflow the container */
+  text-overflow: ellipsis; /* Adds '...' if text is too long */
+}
+
+/* Close Button */
+.close-skills-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+}
+
+.close-skills-btn:hover {
+  padding: 5px; /* Expands slightly on hover */
+}
+
+/* Projects Modal Styling (Consistent with other modals) */
+#projectsModal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Content */
+#projectsModal .modal-content {
+  background: #1b1f22; /* Same as Intro & Skills */
+  padding: 20px;
+  width: 50%; /* Adjusted width */
+  max-height: 80vh; /* Set max height */
+  overflow-y: auto; /* Enables vertical scrolling */
+  border-radius: 10px;
+  color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+#projectsModal .modal-content p {
+  text-align: justify;
+  line-height: 1.6;
+}
+
+/* Close Button */
+.projects-close-btn {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Project Styling */
+.project {
+  margin-bottom: 20px;
+}
+
+/* Separator Line */
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #555;
+  margin: 15px 0;
+}
+
+/* Justify text inside project descriptions */
+.project-description {
+  text-align: justify;
+  line-height: 1.6; /* Improves readability */
+}
+
+/* CONTACT MODAL */
+#contactModal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Above other content */
+}
+
+/* Contact Box (Container) */
+.contact-box {
+  background: #1b1f22; /* Same dark color as other modals */
+  width: 40vw; /* Adjust as needed */
+  max-width: 600px;
+  padding: 30px;
+  border-radius: 10px;
+  position: relative;
+  text-align: left; /* Keep text aligned left */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between elements */
+  margin: auto;
+}
+
+/* Close Button */
+.close-contact-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Contact Heading */
+.contact-heading {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
+  text-align: center; /* Matches reference UI */
+}
+
+/* Input Row for Name & Email */
+.input-row {
+  display: flex;
+  gap: 20px; /* Space between name & email fields */
+  margin-bottom: 20px;
+}
+
+/* Form Group for Each Input */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Make them share available space */
+}
+
+/* Labels */
+.form-group label {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 5px;
+}
+
+/* Inputs & Textarea */
+.form-group input,
+.form-group textarea {
+  background: transparent;
+  border: 1px solid #fff;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  resize: none; /* Prevent textarea from resizing */
+}
+
+/* Message Field */
+.form-group textarea {
+  height: 100px; /* Adjust as needed */
+}
+
+/* Button Row */
+.button-row {
+  display: flex;
+  gap: 20px; /* Space between buttons */
+  margin-top: 20px;
+}
+
+/* Buttons */
+.button-row button {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+/* Hover Effect for Buttons */
+.button-row button:hover {
+  background: white;
+  color: black;
+}
