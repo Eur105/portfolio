@@ -469,3 +469,123 @@ hr {
   background: white;
   color: black;
 }
+
+@media (max-width: 991px) {
+  .intro-box,
+  .skills-box,
+  .contact-box,
+  #projectsModal .modal-content {
+    width: 70vw;
+    padding: 20px;
+  }
+
+  .skills-list {
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+  }
+
+  .input-row {
+    flex-direction: column;
+  }
+
+  .button-row {
+    flex-direction: column;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 16px;
+  }
+
+  .intro-heading,
+  .skills-heading,
+  .contact-heading {
+    font-size: 22px;
+  }
+
+  .intro-box p,
+  .project-description,
+  .skills-list li {
+    font-size: 15px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+  }
+
+  nav ul li {
+    margin: 5px;
+  }
+
+  .social-icons {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}
+
+/* For phones (below 600px) */
+@media (max-width: 599px) {
+  .intro-box,
+  .skills-box,
+  .contact-box,
+  #projectsModal .modal-content {
+    width: 90vw;
+    padding: 15px;
+    min-height: auto;
+  }
+
+  .intro-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .intro-heading,
+  .skills-heading,
+  .contact-heading {
+    font-size: 20px;
+  }
+
+  .intro-box p,
+  .project-description,
+  .skills-list li {
+    font-size: 14px;
+  }
+
+  .profile-circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .nav-button,
+  nav ul li a {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .social-icons a {
+    width: 40px;
+    height: 40px;
+  }
+
+  .social-icons a img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .button-row button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  footer {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+}
