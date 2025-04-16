@@ -226,7 +226,7 @@ footer {
 
 /* Skills Modal (Same Style as Intro) */
 .skills-box {
-  background: #1b1f22; /* Semi-transparent dark box */
+  background: #083151; /* Semi-transparent dark box */
   border-radius: 15px;
   padding: 30px;
   text-align: left;
@@ -313,7 +313,7 @@ footer {
 
 /* Modal Content */
 #projectsModal .modal-content {
-  background: #1b1f22; /* Same as Intro & Skills */
+  background: #083151; /* Same as Intro & Skills */
   padding: 20px;
   width: 50%; /* Adjusted width */
   max-height: 80vh; /* Set max height */
@@ -374,7 +374,7 @@ hr {
 
 /* Contact Box (Container) */
 .contact-box {
-  background: #1b1f22; /* Same dark color as other modals */
+  background: #083151; /* Same dark color as other modals */
   width: 40vw; /* Adjust as needed */
   max-width: 600px;
   padding: 30px;
